@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Landing Page</title>
+    <style>
+        /* RESET - This removes default spacing */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* ==========================================
+           NAVIGATION BAR
+           ========================================== */
+        nav {
+            /* Add your code here to make a navigation bar */
+            /* Hint: Use flexbox! */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #333;
+            color: white;
+            padding: 20px;
+        }
+
+        nav h1 {
+            /* Your logo/brand name */
+        }
+
+        nav ul {
+            display: flex ;
+            gap: 20px;
+            list-style: none;
+            /* Make menu items sit in a row */
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+
+        /* ==========================================
+           HERO SECTION (Big welcome section)
+           ========================================== */
+        .hero {
+            /* Center the content */
+            /* Make it tall */
+            display: flex  ;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: #667eea;
+            color: white;
+            text-align: center;
+            height: 50vh;
+        }
+
+        .hero h2 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+
+        /* ==========================================
+           BUTTON
+           ========================================== */
+        .btn {
+            /* Style your button */
+            /* Add background, padding, border-radius */
+            display: inline-block;
+            padding: 15px 40px;
+            background: #3498db;
+            color: white;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            
+        }
+
+        .btn:hover {
+            background: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        /* ==========================================
+           FEATURES SECTION
+           ========================================== */
+        .features {
+            padding: 60px 20px;
+            background: #f4f4f4;
+        }
+
+        .features h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
+
+        .feature-grid {
+            /* Use GRID to make 3 columns */
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        /* ==========================================
+           LOGIN FORM
+           ========================================== */
+        .login-section {
+            padding: 60px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* Center the form */
+        }
+
+        .login-form {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            max-width: 400px;
+        }
+
+        .login-form h2 {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .form-group input {
+            /* Style your inputs */
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc; 
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .form-group input:focus {
+            /* Style when clicked */
+            border-color: #3498db;
+            outline: none; 
+            BOX-SHADOW: 0 0 5PX RGBA(52, 152, 219, 0.5);
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 15px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .btn-submit:hover {
+            background: #5568d3;
+        }
+
+        /* ==========================================
+           RESPONSIVE - Make it work on phones
+           ========================================== */
+        @media (max-width: 768px) {
+            /* Change grid to 1 column on small screens */
+            .feature-grid {
+                grid-template-columns: 1fr;
+                /* Your code here */
+            }
+            nav{
+                flex-direction: column;
+                gap: 10px;
+            }
+            .hero h2 {
+                font-size: 32px;
+            }
+            .hero p {
+                font-size: 16px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <h1>MYPROJECT</h1>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#login">Login</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+        <h2>Welcome to My Website</h2>
+        <p>This is an amazing landing page that I built myself!</p>
+        <a href="#login" class="btn">Get Started</a>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="features" id="features">
+        <h2>Our Features</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h3>🚀 Fast</h3>
+                <p>Lightning fast performance</p>
+            </div>
+            <div class="feature-card">
+                <h3>🔒 Secure</h3>
+                <p>Your data is safe</p>
+            </div>
+            <div class="feature-card">
+                <h3>📱 Responsive</h3>
+                <p>Works on all devices</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- LOGIN FORM -->
+    <section class="login-section" id="login">
+        <form class="login-form">
+            <h2>Sign In</h2>
+            
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="your@email.com">
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter password">
+            </div>
+            
+            <button type="submit" class="btn-submit">Log In</button>
+        </form>
+    </section>
+
+</body>
+</html>
